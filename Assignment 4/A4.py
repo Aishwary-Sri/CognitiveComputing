@@ -1,0 +1,10 @@
+import numpy as np
+Aishwary = np.linspace(10, 100, 25)
+print("Dimensions:", Aishwary.ndim)
+print("Shape:", Aishwary.shape)
+print("Total Elements:", Aishwary.size)
+print("Data Type:", Aishwary.dtype)
+print("Total Bytes Consumed:", Aishwary.nbytes)
+t = Aishwary.reshape(25, 1)
+print("Transposed Array using reshape():", t)
+print("Transposed using .T:", Aishwary.T)
