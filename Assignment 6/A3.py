@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+d = np.random.randn(50)
+c = np.cumsum(d)
+fig,a = plt.subplots(2,2,figsize=(10,8))
+a[0,0].plot(c,"g-")
+a[0,0].set_title("Cumulative Sum")
+a[0,0].set_xlabel("Index")
+a[0,0].set_ylabel("Value")
+a[0,0].grid(True)
+a[0,1].scatter(range(len(d)),d,color="orange")
+a[0,1].set_title("Random Noise")
+a[0,1].set_xlabel("Index")
+a[0,1].set_ylabel("Value")
+a[0,1].grid(True)
+a[1,0].axis("off")
+a[1,1].axis("off")
+plt.suptitle("Q3: Subplots")
+plt.tight_layout()
+plt.show()
